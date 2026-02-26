@@ -100,7 +100,7 @@ resource "aws_security_group" "private_sg" {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    cidr_blocks = []  # No outbound internet
+    cidr_blocks = [] # No outbound internet
   }
 }
 
@@ -134,14 +134,14 @@ resource "aws_instance" "private_linux" {
 
 resource "aws_instance" "public_vm_linux" {
 
-  subnet_id = var.public_subnet_cidr
+  subnet_id              = aws_subnet.public.id
   vpc_security_group_ids = [aws_security_group.jump_sg.id]
-  key_name = var.key_name_private
-  ami = "ami-051a31ab2f4d498f5"
-  instance_type = "t3.micro"
+  key_name               = var.key_name_private
+  ami                    = "ami-051a31ab2f4d498f5"
+  instance_type          = "t3.micro"
 
   tags = {
     Name = "public_linux_vm"
   }
-  
+
 }

@@ -15,11 +15,11 @@ variable "private_subnet_cidr" {
 }
 
 variable "key_name_public" {
-    default = "public-vm-key"
-    description = "Existing AWS key pair"
+  default     = "public-vm-key"
+  description = "Existing AWS key pair"
 }
 
 variable "key_name_private" {
-    default = "private-vm-key"
-    description = "Existing AWS key pair"
+  default     = "private-vm-key"
+  description = "Existing AWS key pair"
 }

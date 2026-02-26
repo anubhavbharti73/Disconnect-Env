@@ -8,12 +8,12 @@ terraform {
     }
   }
 
-  cloud{
+  cloud {
     organization = "iAI"
-    workspaces{
-        name = "Disconnect-Env"
+    workspaces {
+      name = "Disconnect-Env"
     }
-    }
+  }
 }
 
 
