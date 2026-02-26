@@ -23,3 +23,8 @@ variable "key_name_private" {
   default     = "private-vm-key"
   description = "Existing AWS key pair"
 }
+
+variable "key_public_vm_linux_jump" {
+  default     = "key-for-public-vm"
+  description = "Existing AWS key pair"
+}
