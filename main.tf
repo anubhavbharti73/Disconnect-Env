@@ -130,4 +130,6 @@ resource "aws_instance" "private_linux" {
   tags = {
     Name = "private-linux"
   }
+
 }
+
